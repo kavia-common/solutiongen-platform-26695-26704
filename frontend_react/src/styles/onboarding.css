@@ -208,8 +208,88 @@
   color: var(--accent-yellow);
 }
 
+/* Configuration form */
+.onb-form{
+  display: grid;
+  gap: var(--space-4);
+}
+
+.onb-field{
+  display: grid;
+  gap: 8px;
+}
+
+.onb-label{
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.onb-input{
+  width: 100%;
+  height: 38px;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1px solid var(--border-subtle);
+  background: rgba(255,255,255,0.04);
+  color: var(--text-primary);
+  font-size: 14px;
+  line-height: 1;
+}
+
+.onb-input::placeholder{
+  color: var(--text-tertiary);
+}
+
+.onb-input:hover{
+  border-color: rgba(255, 212, 0, 0.35);
+}
+
+.onb-actions{
+  display: flex;
+  justify-content: center;
+  padding-top: var(--space-2);
+}
+
+.onb-primaryBtn{
+  appearance: none;
+  border: 0;
+  height: 36px;
+  padding: 0 16px;
+  border-radius: 12px;
+  background: var(--accent-yellow);
+  color: rgba(0,0,0,0.88);
+  font-weight: 750;
+  font-size: 13px;
+  letter-spacing: 0.1px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: transform 140ms ease, filter 140ms ease, background-color 140ms ease;
+}
+
+.onb-primaryBtn:hover{
+  background: var(--accent-yellow-2);
+  transform: translateY(-1px);
+}
+
+.onb-primaryBtn:active{
+  transform: translateY(0px);
+  filter: brightness(0.98);
+}
+
+.onb-primaryBtnIcon{
+  width: 16px;
+  height: 16px;
+}
+
 /* Helper text / small */
 .onb-muted{
   color: var(--text-secondary);
   font-size: 13px;
+}
+
+.onb-debugRow{
+  margin-top: var(--space-1);
 }
