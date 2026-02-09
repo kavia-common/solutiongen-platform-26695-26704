@@ -176,30 +176,6 @@ export default function OnboardingInputPage() {
                   />
                 </label>
 
-                <div className="onb-actions">
-                  <button
-                    type="button"
-                    className="onb-primaryBtn"
-                    onClick={onNext}
-                  >
-                    Continue to Gap Analysis
-                    <svg
-                      className="onb-primaryBtnIcon"
-                      viewBox="0 0 24 24"
-                      fill="none"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M10 8l4 4-4 4"
-                        stroke="currentColor"
-                        strokeWidth="2.4"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </button>
-                </div>
-
                 <p className="onb-muted onb-debugRow" aria-live="polite">
                   Selection (stub): <strong>{outputType}</strong>
                 </p>
@@ -207,6 +183,27 @@ export default function OnboardingInputPage() {
             </div>
           </div>
         </section>
+
+        {/* Primary CTA - placed below all sections (outside Configuration card) */}
+        <div className="onb-actions onb-actionsStandalone">
+          <button type="button" className="onb-primaryBtn" onClick={onNext}>
+            Continue to Gap Analysis
+            <svg
+              className="onb-primaryBtnIcon"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M10 8l4 4-4 4"
+                stroke="currentColor"
+                strokeWidth="2.4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
     </div>
   );

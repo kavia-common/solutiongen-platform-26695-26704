@@ -305,11 +305,16 @@
   padding-top: 2px;
 }
 
+/* Standalone CTA row: placed below the last section. */
+.onb-actionsStandalone{
+  margin-top: 24px; /* aligns with section spacing (+10px adjustment already applied) */
+}
+
 .onb-primaryBtn{
   appearance: none;
   border: 0;
-  height: 26px;
-  padding: 0 19px;
+  height: 30px;        /* +4px height for a noticeable size increase */
+  padding: 0 24px;     /* +5px per side vs previous 19px */
   border-radius: 8px;
   background: var(--accent-yellow);
   color: rgba(0,0,0,0.90);
