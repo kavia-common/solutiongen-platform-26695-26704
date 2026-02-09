@@ -1,0 +1,37 @@
+:root{
+  --bg-canvas: #0B0B0D;         /* near-black */
+  --bg-surface: #141418;        /* cards */
+  --bg-surface-2: #1B1B21;      /* hover/raised */
+  --text-primary: #F2F2F3;      /* near-white */
+  --text-secondary: #A7A7AE;    /* muted */
+  --text-tertiary: #7A7A82;     /* more muted */
+  --border-subtle: #2A2A33;     /* subtle borders */
+  --accent-yellow: #FFD400;     /* primary accent */
+  --accent-yellow-2: #FFB800;   /* alt accent */
+  --focus-ring: rgba(255, 212, 0, 0.35);
+
+  --radius-sm: 10px;
+  --radius-md: 14px;
+  --shadow-soft: 0 8px 24px rgba(0,0,0,0.35);
+
+  --space-1: 8px;
+  --space-2: 12px;
+  --space-3: 16px;
+  --space-4: 20px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --space-7: 40px;
+
+  --container-max: 1040px;
+}
+
+/* Accessible focus ring */
+:where(a, button, input, textarea, select, [tabindex]:not([tabindex="-1"])):focus-visible{
+  outline: 3px solid var(--focus-ring);
+  outline-offset: 3px;
+}
+
+::selection{
+  background: rgba(255, 212, 0, 0.25);
+  color: var(--text-primary);
+}
