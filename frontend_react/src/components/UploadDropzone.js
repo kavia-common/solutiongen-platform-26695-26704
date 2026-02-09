@@ -72,60 +72,55 @@ export default function UploadDropzone({
   }
 
   return (
-    <section className="onb-section" aria-labelledby={`${inputId}-label`}>
-      <h2 id={`${inputId}-label`} className="onb-sectionTitle">
-        {label}
-      </h2>
+    <div
+      className={`dropzone ${isDragActive ? "dropzone--active" : ""}`}
+      role="button"
+      tabIndex={0}
+      onClick={openPicker}
+      onKeyDown={onKeyDown}
+      onDrop={onDrop}
+      onDragOver={onDragOver}
+      onDragLeave={onDragLeave}
+      aria-label={label}
+      aria-describedby={`${inputId}-hint`}
+    >
+      <div>
+        <svg
+          className="dropzoneIcon"
+          viewBox="0 0 24 24"
+          fill="none"
+          aria-hidden="true"
+        >
+          <path
+            d="M12 16V4m0 0l-4 4m4-4l4 4"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M4 16.5v1A2.5 2.5 0 0 0 6.5 20h11A2.5 2.5 0 0 0 20 17.5v-1"
+            stroke="currentColor"
+            strokeWidth="1.8"
+            strokeLinecap="round"
+          />
+        </svg>
 
-      <div
-        className={`dropzone ${isDragActive ? "dropzone--active" : ""}`}
-        role="button"
-        tabIndex={0}
-        onClick={openPicker}
-        onKeyDown={onKeyDown}
-        onDrop={onDrop}
-        onDragOver={onDragOver}
-        onDragLeave={onDragLeave}
-        aria-describedby={`${inputId}-hint`}
-      >
-        <div>
-          <svg
-            className="dropzoneIcon"
-            viewBox="0 0 24 24"
-            fill="none"
-            aria-hidden="true"
-          >
-            <path
-              d="M12 16V4m0 0l-4 4m4-4l4 4"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M4 16.5v1A2.5 2.5 0 0 0 6.5 20h11A2.5 2.5 0 0 0 20 17.5v-1"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              strokeLinecap="round"
-            />
-          </svg>
-
-          <div className="dropzonePrimary">Drop files here or click to browse</div>
-          <div id={`${inputId}-hint`} className="dropzoneSecondary">
-            {supportedTypesText}
-          </div>
+        <div className="dropzonePrimary">Drag files here or click to browse</div>
+        <div id={`${inputId}-hint`} className="dropzoneSecondary">
+          {supportedTypesText}
         </div>
-
-        <input
-          id={inputId}
-          ref={inputRef}
-          type="file"
-          accept={accept}
-          multiple
-          style={{ display: "none" }}
-          onChange={(e) => handleFiles(e.target.files)}
-        />
       </div>
-    </section>
+
+      <input
+        id={inputId}
+        ref={inputRef}
+        type="file"
+        accept={accept}
+        multiple
+        style={{ display: "none" }}
+        onChange={(e) => handleFiles(e.target.files)}
+      />
+    </div>
   );
 }

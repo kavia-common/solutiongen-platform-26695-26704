@@ -1,42 +1,43 @@
 .onb-page{
   min-height: 100vh;
-  background: var(--bg-canvas);
+  background: radial-gradient(ellipse at top, rgba(255,212,0,0.08) 0%, rgba(11,11,13,0.2) 22%, var(--bg-canvas) 58%, #07070A 100%);
 }
 
 .onb-container{
   width: 100%;
-  max-width: var(--container-max);
+  max-width: 980px;
   margin: 0 auto;
-  padding: var(--space-6) var(--space-5) var(--space-7);
+  padding: 18px 18px 34px;
 }
 
 @media (max-width: 640px){
   .onb-container{
-    padding: var(--space-5) var(--space-4) var(--space-6);
+    padding: 16px 14px 28px;
   }
 }
 
+/* Stepper row matches compact, subtle top progress */
 .onb-stepper{
   display: flex;
   flex-wrap: wrap;
-  gap: 18px;
+  gap: 14px;
   align-items: center;
   padding-top: 6px;
-  padding-bottom: var(--space-5);
+  padding-bottom: 14px;
 }
 
 .onb-step{
   display: inline-flex;
-  align-items: baseline;
+  align-items: center;
   gap: 8px;
-  color: var(--text-tertiary);
-  font-size: 14px;
+  color: rgba(255,255,255,0.55);
+  font-size: 12px;
   line-height: 1.2;
   letter-spacing: 0.2px;
 }
 
 .onb-step strong{
-  font-weight: 600;
+  font-weight: 700;
   color: inherit;
 }
 
@@ -50,59 +51,100 @@
   text-underline-offset: 6px;
 }
 
+/* Centered title block per screenshot */
 .onb-header{
-  padding-bottom: var(--space-6);
+  text-align: center;
+  padding: 10px 0 16px;
 }
 
 .onb-title{
   margin: 0;
-  font-size: 34px;
+  font-size: 22px;
   line-height: 1.15;
-  font-weight: 700;
-  letter-spacing: -0.02em;
+  font-weight: 800;
+  letter-spacing: -0.01em;
 }
 
 @media (max-width: 640px){
   .onb-title{
-    font-size: 28px;
+    font-size: 20px;
   }
 }
 
 .onb-subtitle{
-  margin-top: var(--space-2);
-  color: var(--text-secondary);
-  font-size: 15px;
-  line-height: 1.5;
-  max-width: 64ch;
+  margin-top: 6px;
+  color: rgba(255,255,255,0.62);
+  font-size: 12px;
+  line-height: 1.45;
+  max-width: 76ch;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+/* Sections appear as cards with a yellow label+icon header row */
 .onb-section{
-  margin-top: var(--space-6);
+  margin-top: 14px;
 }
 
+/* Keep for a11y (screen readers), but visually we now use card header labels */
 .onb-sectionTitle{
-  margin: 0 0 var(--space-3);
-  font-size: 18px;
-  line-height: 1.25;
-  font-weight: 650;
-  letter-spacing: -0.01em;
+  margin: 0 0 10px;
+  font-size: 12px;
+  line-height: 1.2;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  color: var(--accent-yellow);
+  text-transform: none;
 }
 
+/* Card shell */
 .onb-card{
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-soft);
+  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.10);
+  border-radius: 10px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.35);
 }
 
-/* Dropzone */
+/* Card header row (icon + yellow title) */
+.onb-cardHeader{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 14px 10px;
+}
+
+.onb-cardHeaderIcon{
+  width: 16px;
+  height: 16px;
+  display: grid;
+  place-items: center;
+  border-radius: 4px;
+  background: rgba(255,212,0,0.10);
+  border: 1px solid rgba(255,212,0,0.25);
+  color: var(--accent-yellow);
+  flex: 0 0 auto;
+}
+
+.onb-cardHeaderTitle{
+  font-size: 12px;
+  font-weight: 800;
+  color: var(--accent-yellow);
+  letter-spacing: 0.01em;
+}
+
+/* Card body padding */
+.onb-cardBody{
+  padding: 0 14px 14px;
+}
+
+/* Dropzone inner panel matches screenshot (solid panel, subtle border) */
 .dropzone{
   width: 100%;
-  min-height: 168px;
-  padding: var(--space-6);
-  border-radius: var(--radius-md);
-  border: 1px dashed var(--border-subtle);
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.00));
+  min-height: 112px;
+  padding: 18px 18px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.03);
   display: grid;
   place-items: center;
   text-align: center;
@@ -111,40 +153,40 @@
 }
 
 .dropzone:hover{
-  border-color: rgba(255, 212, 0, 0.55);
-  background-color: rgba(255, 212, 0, 0.03);
+  border-color: rgba(255, 212, 0, 0.32);
+  background-color: rgba(255, 255, 255, 0.04);
 }
 
 .dropzone--active{
-  border-color: var(--accent-yellow);
-  background-color: rgba(255, 212, 0, 0.05);
+  border-color: rgba(255, 212, 0, 0.62);
+  background-color: rgba(255, 212, 0, 0.06);
   transform: translateY(-1px);
 }
 
 .dropzonePrimary{
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-size: 13px;
+  font-weight: 650;
+  color: rgba(255,255,255,0.88);
 }
 
 .dropzoneSecondary{
-  margin-top: var(--space-2);
-  font-size: 13px;
-  color: var(--text-secondary);
+  margin-top: 6px;
+  font-size: 11px;
+  color: rgba(255,255,255,0.62);
 }
 
 .dropzoneIcon{
-  width: 40px;
-  height: 40px;
-  margin: 0 auto var(--space-3);
-  color: var(--accent-yellow);
+  width: 22px;
+  height: 22px;
+  margin: 0 auto 10px;
+  color: rgba(255,255,255,0.62);
 }
 
-/* Output selector tiles */
+/* Output selector tiles: compact row with small icon squares */
 .outputGrid{
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 12px;
 }
 
 @media (max-width: 1024px){
@@ -162,110 +204,122 @@
 .outputTile{
   text-align: left;
   width: 100%;
-  min-height: 124px;
-  border-radius: 16px;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  padding: 20px;
+  min-height: 72px;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.10);
+  padding: 12px;
   cursor: pointer;
-  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 6px;
   position: relative;
 }
 
 .outputTile:hover{
-  border-color: rgba(255, 212, 0, 0.6);
-  box-shadow: 0 10px 28px rgba(0,0,0,0.45);
-  transform: translateY(-1px);
+  border-color: rgba(255, 212, 0, 0.35);
+  background-color: rgba(255,255,255,0.03);
 }
 
 .outputTileTitle{
-  font-size: 16px;
-  font-weight: 650;
-  color: var(--text-primary);
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.88);
 }
 
 .outputTileDesc{
-  font-size: 13px;
-  line-height: 1.45;
-  color: var(--text-secondary);
-  margin-right: 24px;
+  font-size: 11px;
+  line-height: 1.35;
+  color: rgba(255,255,255,0.62);
+  margin-right: 18px;
 }
 
 .outputTile--selected{
-  border-width: 2px;
-  border-color: var(--accent-yellow);
+  border-width: 1px;
+  border-color: rgba(255, 212, 0, 0.75);
+  box-shadow: 0 0 0 2px rgba(255, 212, 0, 0.12) inset;
 }
 
 .outputTileCheck{
   position: absolute;
-  top: 14px;
-  right: 14px;
+  top: 10px;
+  right: 10px;
+  width: 14px;
+  height: 14px;
+  color: var(--accent-yellow);
+}
+
+/* Small tile icon square (top-left) */
+.outputTileIcon{
   width: 18px;
   height: 18px;
-  color: var(--accent-yellow);
+  border-radius: 4px;
+  background: rgba(0,0,0,0.18);
+  border: 1px solid rgba(255,255,255,0.12);
+  color: rgba(255,255,255,0.70);
+  display: grid;
+  place-items: center;
 }
 
 /* Configuration form */
 .onb-form{
   display: grid;
-  gap: var(--space-4);
+  gap: 12px;
 }
 
 .onb-field{
   display: grid;
-  gap: 8px;
+  gap: 6px;
 }
 
 .onb-label{
-  font-size: 13px;
-  font-weight: 600;
-  color: var(--text-secondary);
+  font-size: 11px;
+  font-weight: 650;
+  color: rgba(255,255,255,0.70);
 }
 
 .onb-input{
   width: 100%;
-  height: 38px;
+  height: 34px;
   padding: 0 12px;
-  border-radius: 10px;
-  border: 1px solid var(--border-subtle);
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.10);
   background: rgba(255,255,255,0.04);
-  color: var(--text-primary);
-  font-size: 14px;
+  color: rgba(255,255,255,0.90);
+  font-size: 12px;
   line-height: 1;
 }
 
 .onb-input::placeholder{
-  color: var(--text-tertiary);
+  color: rgba(255,255,255,0.45);
 }
 
 .onb-input:hover{
-  border-color: rgba(255, 212, 0, 0.35);
+  border-color: rgba(255, 212, 0, 0.22);
 }
 
 .onb-actions{
   display: flex;
   justify-content: center;
-  padding-top: var(--space-2);
+  padding-top: 2px;
 }
 
 .onb-primaryBtn{
   appearance: none;
   border: 0;
-  height: 36px;
-  padding: 0 16px;
-  border-radius: 12px;
+  height: 26px;
+  padding: 0 14px;
+  border-radius: 8px;
   background: var(--accent-yellow);
-  color: rgba(0,0,0,0.88);
-  font-weight: 750;
-  font-size: 13px;
-  letter-spacing: 0.1px;
+  color: rgba(0,0,0,0.90);
+  font-weight: 800;
+  font-size: 11px;
+  letter-spacing: 0.2px;
   cursor: pointer;
   display: inline-flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   transition: transform 140ms ease, filter 140ms ease, background-color 140ms ease;
 }
 
@@ -280,16 +334,16 @@
 }
 
 .onb-primaryBtnIcon{
-  width: 16px;
-  height: 16px;
+  width: 14px;
+  height: 14px;
 }
 
 /* Helper text / small */
 .onb-muted{
-  color: var(--text-secondary);
-  font-size: 13px;
+  color: rgba(255,255,255,0.62);
+  font-size: 11px;
 }
 
 .onb-debugRow{
-  margin-top: var(--space-1);
+  display: none;
 }

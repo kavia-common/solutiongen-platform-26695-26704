@@ -19,48 +19,76 @@ export default function OutputTypeSelector({ value, options, onChange }) {
   }
 
   return (
-    <section className="onb-section" aria-labelledby={`${groupId}-label`}>
-      <h2 id={`${groupId}-label`} className="onb-sectionTitle">
+    <div
+      className="outputGrid"
+      role="radiogroup"
+      aria-label="Output type"
+      aria-labelledby={`${groupId}-label`}
+    >
+      {/* Hidden label to keep semantics without altering visual layout */}
+      <span
+        id={`${groupId}-label`}
+        style={{
+          position: "absolute",
+          width: 1,
+          height: 1,
+          padding: 0,
+          margin: -1,
+          overflow: "hidden",
+          clip: "rect(0,0,0,0)",
+          whiteSpace: "nowrap",
+          border: 0,
+        }}
+      >
         Choose Output Type
-      </h2>
+      </span>
 
-      <div className="outputGrid" role="radiogroup" aria-label="Output type">
-        {options.map((opt) => {
-          const selected = value === opt.value;
+      {options.map((opt) => {
+        const selected = value === opt.value;
 
-          return (
-            <div
-              key={opt.value}
-              className={`outputTile ${selected ? "outputTile--selected" : ""}`}
-              role="radio"
-              aria-checked={selected}
-              tabIndex={selected ? 0 : -1}
-              onClick={() => select(opt.value)}
-              onKeyDown={(e) => onKeyDown(e, opt.value)}
-            >
-              {selected ? (
-                <svg
-                  className="outputTileCheck"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M20 6L9 17l-5-5"
-                    stroke="currentColor"
-                    strokeWidth="2.2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              ) : null}
+        return (
+          <div
+            key={opt.value}
+            className={`outputTile ${selected ? "outputTile--selected" : ""}`}
+            role="radio"
+            aria-checked={selected}
+            tabIndex={selected ? 0 : -1}
+            onClick={() => select(opt.value)}
+            onKeyDown={(e) => onKeyDown(e, opt.value)}
+          >
+            <span className="outputTileIcon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="12" height="12" fill="none">
+                <path
+                  d="M8 7h8M8 11h8M8 15h6"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                />
+              </svg>
+            </span>
 
-              <div className="outputTileTitle">{opt.label}</div>
-              <div className="outputTileDesc">{opt.description}</div>
-            </div>
-          );
-        })}
-      </div>
-    </section>
+            {selected ? (
+              <svg
+                className="outputTileCheck"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M20 6L9 17l-5-5"
+                  stroke="currentColor"
+                  strokeWidth="2.2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            ) : null}
+
+            <div className="outputTileTitle">{opt.label}</div>
+            <div className="outputTileDesc">{opt.description}</div>
+          </div>
+        );
+      })}
+    </div>
   );
 }
