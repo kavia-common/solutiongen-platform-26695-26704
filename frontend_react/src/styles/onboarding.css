@@ -9,7 +9,7 @@
   background: #111111;          /* --topbar-bg */
   display: flex;
   align-items: center;
-  padding: 8px 16px;            /* +8px vertical padding (top/bottom), keep ~12–16px horizontal */
+  padding: 10px 16px 8px;       /* top padding exactly 10px; keep left/right 16px and bottom 8px */
 }
 
 .brand{
