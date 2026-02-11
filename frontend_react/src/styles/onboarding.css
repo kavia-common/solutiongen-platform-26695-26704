@@ -95,12 +95,30 @@
   padding-bottom: 14px;
 }
 
+.onb-stepper{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  align-items: center;
+  justify-content: center; /* Center steps horizontally */
+  padding-top: 6px;
+  padding-bottom: 14px;
+}
+
+/* Step visuals per latest reference:
+   - Active step: yellow filled circle behind number
+   - Non-active steps: muted gray filled circles behind number
+   - Text sizes in the stepper increased by +3px */
 .onb-step{
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  color: rgba(255,255,255,0.55);
-  font-size: 12px;
+
+  /* Label color stays muted even when another step is active */
+  color: rgba(255,255,255,0.60);
+
+  /* +3px from previous 12px */
+  font-size: 15px;
   line-height: 1.2;
   letter-spacing: 0.2px;
 }
@@ -110,25 +128,30 @@
   color: inherit;
 }
 
+/* Default (non-active) number: muted gray filled circle */
 .onb-stepNumber{
   display: inline-grid;
   place-items: center;
-  width: 18px;
-  height: 18px;
+
+  /* Circle size tuned for the larger number font (+3px) */
+  width: 20px;
+  height: 20px;
   border-radius: 999px;
+
   font-weight: 700;
-  font-size: 12px;
+
+  /* +3px from previous 12px */
+  font-size: 15px;
   line-height: 1;
-  color: inherit;
-  background: transparent;
+
+  /* Muted circle + readable number (matches screenshot look for steps 2–5) */
+  background: rgba(255,255,255,0.14);
+  color: rgba(255,255,255,0.72);
 }
 
+/* Active step: keep label muted; only highlight number circle */
 .onb-step--active{
-  /* Active state per screenshot:
-     - no underline
-     - only the number is highlighted (yellow circle)
-     Keep overall step text otherwise subtle. */
-  color: rgba(255,255,255,0.55);
+  color: rgba(255,255,255,0.60);
 }
 
 .onb-step--active .onb-stepNumber{
