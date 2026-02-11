@@ -185,7 +185,8 @@
 
 /* Sections appear as cards with a yellow label+icon header row */
 .onb-section{
-  margin-top: 24px;
+  /* Increase vertical gap between the main section containers by +5px */
+  margin-top: 29px;
 }
 
 /* Keep for a11y (screen readers), but visually we now use card header labels */
@@ -239,7 +240,8 @@
 
 /* Card body padding */
 .onb-cardBody{
-  padding: 0 14px 14px;
+  /* +10px to increase overall card/container height as requested */
+  padding: 0 14px 24px;
 }
 
 /* Dropzone inner panel matches screenshot (solid panel, subtle border) */
