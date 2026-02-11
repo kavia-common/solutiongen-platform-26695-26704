@@ -14,7 +14,9 @@
 
 .brand{
   display: inline-flex;
-  align-items: center;
+  /* We want the icon vertically centered against the TITLE line,
+     not the combined title+tagline block. */
+  align-items: flex-start;
   gap: 8px;                     /* icon→text block */
   min-width: 0;
 }
@@ -29,6 +31,9 @@
   justify-content: center;
   flex: 0 0 auto;
   color: #0B0B0B;               /* --icon-glyph */
+
+  /* Ensure the icon centers with the title row (accounts for title's margin-top). */
+  margin-top: 20px;
 }
 
 .brandText{
