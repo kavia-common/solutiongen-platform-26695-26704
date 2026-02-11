@@ -94,21 +94,8 @@
   padding-top: 6px;
   padding-bottom: 14px;
 
-  /* Move the entire stepper down by 7px (additional +2px) without changing surrounding layout. */
+  /* Move the entire stepper down by 7px (previously 5px; net +2px) without changing surrounding layout. */
   transform: translateY(7px);
-}
-
-.onb-stepper{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 14px;
-  align-items: center;
-  justify-content: center; /* Center steps horizontally */
-  padding-top: 6px;
-  padding-bottom: 14px;
-
-  /* Move the entire stepper down by 5px (previously 2px; net +3px) without changing surrounding layout. */
-  transform: translateY(5px);
 }
 
 /* Step visuals per latest reference:
