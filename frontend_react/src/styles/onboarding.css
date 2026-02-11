@@ -3,6 +3,50 @@
   background: radial-gradient(ellipse at top, rgba(255,212,0,0.08) 0%, rgba(11,11,13,0.2) 22%, var(--bg-canvas) 58%, #07070A 100%);
 }
 
+/* Page Heading / Top Bar (authoritative: assets/page_heading_design_notes.md) */
+.topBar{
+  height: 30px;                 /* ~28–32px */
+  background: #111111;          /* --topbar-bg */
+  display: flex;
+  align-items: center;
+  padding: 0 16px;              /* ~12–16px */
+}
+
+.brand{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;                     /* icon→title, title→tagline */
+  min-width: 0;
+}
+
+.brandIcon{
+  width: 14px;
+  height: 14px;
+  border-radius: 999px;
+  background: #E7B601;          /* --brand-yellow */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  color: #0B0B0B;               /* --icon-glyph */
+}
+
+.brandTitle{
+  color: #E7B601;               /* --brand-yellow */
+  font-size: 13px;              /* ~12–13px */
+  font-weight: 700;             /* 600–700 */
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.brandTagline{
+  color: #8D8D8D;               /* --tagline-gray */
+  font-size: 10px;              /* ~9–10px */
+  font-weight: 400;
+  line-height: 1;
+  white-space: nowrap;
+}
+
 .onb-container{
   width: 100%;
   max-width: 980px;

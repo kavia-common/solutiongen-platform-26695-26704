@@ -2,6 +2,7 @@ import React, { useMemo, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ProgressStepper from "../components/ProgressStepper";
 import PageHeader from "../components/PageHeader";
+import TopBar from "../components/TopBar";
 import UploadDropzone from "../components/UploadDropzone";
 import OutputTypeSelector from "../components/OutputTypeSelector";
 import "../styles/onboarding.css";
@@ -56,6 +57,8 @@ export default function OnboardingInputPage() {
 
   return (
     <div className="onb-page">
+      <TopBar />
+
       <div className="onb-container">
         <ProgressStepper currentStep={1} steps={steps} />
 
