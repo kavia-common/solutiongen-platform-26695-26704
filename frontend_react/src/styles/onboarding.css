@@ -94,8 +94,8 @@
   padding-top: 6px;
   padding-bottom: 14px;
 
-  /* Move the entire stepper down by 2px without changing surrounding layout. */
-  transform: translateY(2px);
+  /* Move the entire stepper down by 5px (previously 2px; net +3px) without changing surrounding layout. */
+  transform: translateY(5px);
 }
 
 .onb-stepper{
@@ -107,8 +107,8 @@
   padding-top: 6px;
   padding-bottom: 14px;
 
-  /* Move the entire stepper down by 2px without changing surrounding layout. */
-  transform: translateY(2px);
+  /* Move the entire stepper down by 5px (previously 2px; net +3px) without changing surrounding layout. */
+  transform: translateY(5px);
 }
 
 /* Step visuals per latest reference:
