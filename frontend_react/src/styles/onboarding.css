@@ -45,6 +45,9 @@
   font-weight: 700;             /* 600–700 */
   line-height: 1;
   white-space: nowrap;
+
+  /* Move title down by 10px within the top bar (only affects title line). */
+  margin-top: 10px;
 }
 
 .brandTagline{
