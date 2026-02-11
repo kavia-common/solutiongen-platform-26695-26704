@@ -1,7 +1,7 @@
 .onb-page{
   min-height: calc(100vh + 40px);
-  /* Screenshot-extracted onboarding background color (assets/onboarding_background_color_notes.md) */
-  background: #1C2437;
+  /* Revert: use the app/theme canvas background (undo #1C2437 override) */
+  background: var(--bg-canvas);
 }
 
 /* Page Heading / Top Bar (authoritative: assets/page_heading_design_notes.md) */
