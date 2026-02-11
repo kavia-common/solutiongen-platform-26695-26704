@@ -46,8 +46,8 @@
   line-height: 1;
   white-space: nowrap;
 
-  /* Move title down by 10px within the top bar (only affects title line). */
-  margin-top: 10px;
+  /* Move title down by 20px within the top bar (only affects title line). */
+  margin-top: 20px;
 }
 
 .brandTagline{
