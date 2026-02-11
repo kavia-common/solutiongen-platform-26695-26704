@@ -1,5 +1,5 @@
 .onb-page{
-  min-height: 100vh;
+  min-height: calc(100vh + 20px);
   background: radial-gradient(ellipse at top, rgba(255,212,0,0.08) 0%, rgba(11,11,13,0.2) 22%, var(--bg-canvas) 58%, #07070A 100%);
 }
 
