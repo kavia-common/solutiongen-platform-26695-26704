@@ -57,8 +57,8 @@
 }
 
 .brandTagline{
-  color: #8D8D8D;               /* --tagline-gray */
-  font-size: 11px;              /* decreased by 4px (15px -> 11px) */
+  color: #ffffff;               /* requested: subtitle/tagline should be white */
+  font-size: 13px;              /* requested: +2px (11px -> 13px) */
   font-weight: 400;
   line-height: 1.05;
   white-space: nowrap;
