@@ -93,6 +93,9 @@
   justify-content: center; /* Center steps horizontally */
   padding-top: 6px;
   padding-bottom: 14px;
+
+  /* Move the entire stepper down by 2px without changing surrounding layout. */
+  transform: translateY(2px);
 }
 
 .onb-stepper{
@@ -103,6 +106,9 @@
   justify-content: center; /* Center steps horizontally */
   padding-top: 6px;
   padding-bottom: 14px;
+
+  /* Move the entire stepper down by 2px without changing surrounding layout. */
+  transform: translateY(2px);
 }
 
 /* Step visuals per latest reference:
