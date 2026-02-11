@@ -110,14 +110,30 @@
   color: inherit;
 }
 
-.onb-step--active{
-  color: var(--accent-yellow);
+.onb-stepNumber{
+  display: inline-grid;
+  place-items: center;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1;
+  color: inherit;
+  background: transparent;
 }
 
-.onb-step--active .onb-stepLabel{
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-underline-offset: 6px;
+.onb-step--active{
+  /* Active state per screenshot:
+     - no underline
+     - only the number is highlighted (yellow circle)
+     Keep overall step text otherwise subtle. */
+  color: rgba(255,255,255,0.55);
+}
+
+.onb-step--active .onb-stepNumber{
+  background: var(--accent-yellow);
+  color: rgba(0,0,0,0.90);
 }
 
 /* Centered title block per screenshot */

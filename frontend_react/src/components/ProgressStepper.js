@@ -17,7 +17,7 @@ export default function ProgressStepper({ currentStep, steps }) {
             className={`onb-step ${isActive ? "onb-step--active" : ""}`}
             aria-current={isActive ? "step" : undefined}
           >
-            <strong>{stepNumber}</strong>
+            <span className="onb-stepNumber">{stepNumber}</span>
             <span className="onb-stepLabel">{label}</span>
           </div>
         );
