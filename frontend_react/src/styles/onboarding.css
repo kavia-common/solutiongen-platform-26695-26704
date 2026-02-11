@@ -133,20 +133,20 @@
   display: inline-grid;
   place-items: center;
 
-  /* Circle size tuned for the larger number font (+3px) */
-  width: 20px;
-  height: 20px;
+  /* Increased circle size per request */
+  width: 26px;
+  height: 26px;
   border-radius: 999px;
 
   font-weight: 700;
 
-  /* +3px from previous 12px */
+  /* Keep existing number typography unchanged */
   font-size: 15px;
   line-height: 1;
 
-  /* Muted circle + readable number (matches screenshot look for steps 2–5) */
-  background: rgba(255,255,255,0.14);
-  color: rgba(255,255,255,0.72);
+  /* Unify circle background color for active + inactive steps */
+  background: var(--accent-yellow);
+  color: rgba(0,0,0,0.90);
 }
 
 /* Active step: keep label muted; only highlight number circle */
