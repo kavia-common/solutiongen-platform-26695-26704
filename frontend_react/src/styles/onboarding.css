@@ -32,8 +32,9 @@
   flex: 0 0 auto;
   color: #0B0B0B;               /* --icon-glyph */
 
-  /* Ensure the icon centers with the title row (accounts for title's margin-top). */
-  margin-top: 20px;
+  /* Ensure the icon centers with the title row (accounts for title's margin-top).
+     Move icon down an additional 3px per spec. */
+  margin-top: 23px;
 }
 
 .brandText{
