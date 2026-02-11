@@ -199,12 +199,15 @@
   text-transform: none;
 }
 
-/* Card shell */
+/* Card shell
+   Apply extracted blue container/card background (NOT page background).
+   Reference: assets/card_container_blue_styling_notes.md */
 .onb-card{
-  background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
-  border: 1px solid rgba(255,255,255,0.10);
-  border-radius: 10px;
-  box-shadow: 0 10px 26px rgba(0,0,0,0.35);
+  /* Extracted deep navy-blue with subtle vertical gradient */
+  background: linear-gradient(180deg, #132235 0%, #0F1A28 100%);
+  border: 1px solid rgba(90, 120, 155, 0.18);
+  border-radius: 8px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
 }
 
 /* Card header row (icon + yellow title) */
@@ -228,7 +231,7 @@
 }
 
 .onb-cardHeaderTitle{
-  font-size: 15px; /* +3px per request (Upload Project Documents / Choose Output Type / Configuration) */
+  font-size: 18px; /* increase section heading size per request */
   font-weight: 800;
   color: var(--accent-yellow);
   letter-spacing: 0.01em;
