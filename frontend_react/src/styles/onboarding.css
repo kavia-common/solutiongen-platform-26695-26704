@@ -78,6 +78,7 @@
   flex-wrap: wrap;
   gap: 14px;
   align-items: center;
+  justify-content: center; /* Center steps horizontally */
   padding-top: 6px;
   padding-bottom: 14px;
 }
