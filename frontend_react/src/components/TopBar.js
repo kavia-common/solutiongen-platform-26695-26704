@@ -7,7 +7,7 @@ import React from "react";
 export default function TopBar() {
   return (
     <div className="topBar" role="banner" aria-label="Demo on Demand header">
-      <div className="brand" aria-label="Demo on Demand powered by AI">
+      <div className="brand" aria-label="Demo on Demand header">
         <span className="brandIcon" aria-hidden="true">
           {/* Simple stylized glyph approximation (near-black) */}
           <svg
@@ -30,8 +30,12 @@ export default function TopBar() {
           </svg>
         </span>
 
-        <span className="brandTitle">Demo on Demand</span>
-        <span className="brandTagline">powered by AI</span>
+        <span className="brandText">
+          <span className="brandTitle">Demo on Demand</span>
+          <span className="brandTagline">
+            Documents, Decks and Demos - Powered by AI
+          </span>
+        </span>
       </div>
     </div>
   );
