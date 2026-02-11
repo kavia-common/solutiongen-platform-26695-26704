@@ -33,7 +33,7 @@
 
 .brandTitle{
   color: #E7B601;               /* --brand-yellow */
-  font-size: 13px;              /* ~12–13px */
+  font-size: 17px;              /* requested: 17px */
   font-weight: 700;             /* 600–700 */
   line-height: 1;
   white-space: nowrap;
